@@ -1,0 +1,281 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/Futures.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.concurrent.{Promise, Future, ExecutionContext}
+</span>4 <span style=''>import scala.language.implicitConversions
+</span>5 <span style=''>
+</span>6 <span style=''>/** @author Stephen Samuel */
+</span>7 <span style=''>class Futures {
+</span>8 <span style=''>
+</span>9 <span style=''>  import EitherMappableFuture._
+</span>10 <span style=''>
+</span>11 <span style=''>  def insert[T](doc: T)(implicit name: String, executor: ExecutionContext): Future[Result] = {
+</span>12 <span style=''>    val promise = </span><span style='background: #AEF1AE'>Promise[Result]()</span><span style=''>
+</span>13 <span style=''>    </span><span style='background: #AEF1AE'>Future {
+</span>14 <span style=''></span><span style='background: #AEF1AE'>      Thread.sleep(300)
+</span>15 <span style=''></span><span style='background: #AEF1AE'>    }.onComplete {
+</span>16 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; promise.success(Result(true, 421))
+</span>17 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>18 <span style=''>    </span><span style='background: #AEF1AE'>promise.future.mapEither(meaningful)</span><span style=''>
+</span>19 <span style=''>  }
+</span>20 <span style=''>
+</span>21 <span style=''>  def check(result: Result): Either[Exception, Result] = </span><span style='background: #AEF1AE'>Right(result)</span><span style=''>
+</span>22 <span style=''>
+</span>23 <span style=''>  def meaningful(result: Result) = {
+</span>24 <span style=''>    </span><span style='background: #AEF1AE'>check(result)</span><span style=''> match {
+</span>25 <span style=''>      case Left(e) =&gt; </span><span style='background: #F0ADAD'>Left(e)</span><span style=''>
+</span>26 <span style=''>      case Right(r) =&gt; </span><span style='background: #AEF1AE'>Right(r)</span><span style=''>
+</span>27 <span style=''>    }
+</span>28 <span style=''>  }
+</span>29 <span style=''>}
+</span>30 <span style=''>
+</span>31 <span style=''>case class Result(success: Boolean = true, status: Int = 200, timestamp: Long = System.currentTimeMillis)
+</span>32 <span style=''>
+</span>33 <span style=''>case class EitherMappableFuture[A](future: Future[A]) {
+</span>34 <span style=''>  def mapEither[E &lt;: Throwable, B](f: A =&gt; Either[E, B])(implicit ec: ExecutionContext): Future[B] = {
+</span>35 <span style=''>    </span><span style='background: #AEF1AE'>future.flatMap(
+</span>36 <span style=''></span><span style='background: #AEF1AE'>      f(_) match {
+</span>37 <span style=''></span><span style='background: #AEF1AE'>        case Left(e) =&gt; Future.failed(e)
+</span>38 <span style=''></span><span style='background: #AEF1AE'>        case Right(b) =&gt; Future.successful(b)
+</span>39 <span style=''></span><span style='background: #AEF1AE'>      })</span><span style=''>
+</span>40 <span style=''>  }
+</span>41 <span style=''>}
+</span>42 <span style=''>object EitherMappableFuture {
+</span>43 <span style=''>  implicit def futureToEitherMappable[A](future: Future[A]): EitherMappableFuture[A] = </span><span style='background: #AEF1AE'>EitherMappableFuture(future)</span><span style=''>
+</span>44 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          336
+          -
+          353
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.concurrent.Promise.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.Promise.apply[com.sksamuel.scoverage.samples.Result]()
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          73
+        </td>
+        <td>
+          358
+          -
+          466
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.onComplete
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.Future.apply[Unit](java.lang.Thread.sleep(300L))(executor).onComplete[scala.concurrent.Promise[com.sksamuel.scoverage.samples.Result]](((x0$1: scala.util.Try[Unit]) =&gt; x0$1 match {
+  case _ =&gt; promise.success(Result.apply(true, 421, Result.apply$default$3))
+}))(executor)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          74
+        </td>
+        <td>
+          471
+          -
+          507
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.EitherMappableFuture.mapEither
+        </td>
+        <td style="background: #AEF1AE">
+          EitherMappableFuture.futureToEitherMappable[com.sksamuel.scoverage.samples.Result](promise.future).mapEither[Exception, com.sksamuel.scoverage.samples.Result]({
+  ((result: com.sksamuel.scoverage.samples.Result) =&gt; Futures.this.meaningful(result))
+})(executor)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          75
+        </td>
+        <td>
+          570
+          -
+          583
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Right.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.`package`.Right.apply[Nothing, com.sksamuel.scoverage.samples.Result](result)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          76
+        </td>
+        <td>
+          626
+          -
+          639
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Futures.check
+        </td>
+        <td style="background: #AEF1AE">
+          Futures.this.check(result)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          77
+        </td>
+        <td>
+          670
+          -
+          677
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Left.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.`package`.Left.apply[Exception, Nothing](e)
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          78
+        </td>
+        <td>
+          701
+          -
+          709
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.util.Right.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.`package`.Right.apply[Nothing, com.sksamuel.scoverage.samples.Result](r)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          79
+        </td>
+        <td>
+          993
+          -
+          1123
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.flatMap
+        </td>
+        <td style="background: #AEF1AE">
+          EitherMappableFuture.this.future.flatMap[B](((x$1: A) =&gt; f.apply(x$1) match {
+  case (value: E)scala.util.Left[E,B]((e @ _)) =&gt; scala.concurrent.Future.failed[Nothing](e)
+  case (value: B)scala.util.Right[E,B]((b @ _)) =&gt; scala.concurrent.Future.successful[B](b)
+}))(ec)
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          80
+        </td>
+        <td>
+          1247
+          -
+          1275
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.EitherMappableFuture.apply
+        </td>
+        <td style="background: #AEF1AE">
+          EitherMappableFuture.apply[A](future)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

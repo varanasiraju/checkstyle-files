@@ -1,0 +1,13 @@
+#Successful Tests
+#Fri Feb 28 05:40:31 UTC 2020
+com.sksamuel.scoverage.samples.SimpleClassTest=1582868429484
+com.sksamuel.scoverage.samples.CharmaxTest=1582868429441
+com.sksamuel.scoverage.samples.OrderEngineTest=1582868424708
+com.sksamuel.scoverage.samples.ClientActorTest=1582868431780
+com.sksamuel.scoverage.samples.DefaultArgumentsObjectTest=1582868429508
+com.sksamuel.scoverage.samples.PriceEngineTest=1582868428743
+com.sksamuel.scoverage.samples.CreditEngineTest=1582868424897
+com.sksamuel.scoverage.samples.SimpleObject2Test=1582868429419
+com.sksamuel.scoverage.samples.DebuggerTest=1582868429496
+com.sksamuel.scoverage.samples.OrderValidatorTest=1582868429460
+com.sksamuel.scoverage.samples.FuturesTest=1582868429406

@@ -1,0 +1,5 @@
+[info] ClientActorTest:
+[info] a client actor
+[info] - should ask for a quote
+[info] - should send a market order request if ask under minimum
+[info] - should not send an order request if ask is over minimum

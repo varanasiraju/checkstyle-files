@@ -1,0 +1,3 @@
+[info] DefaultArgumentsObjectTest:
+[info] DefaultArgumentsObject
+[info] - should execute the default block if no arg is given

@@ -1,0 +1,95 @@
+[info] scalastyle using config /var/lib/jenkins/workspace/scoverage/scalastyle-config.xml
+[debug] Starting scalastyle
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala:38:11: Magic Number
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala:19:10: Regular expression matched 'println'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala:22:10: Regular expression matched 'println'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala:25:10: Regular expression matched 'println'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala:28:10: Regular expression matched 'println'
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala:15:4: Regular expression matched 'println'
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala:29:4: If block needs braces
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala:17:6: Public method must have explicit type
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala:1: Header does not match expected text
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala:7:37: Magic Number
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala:11:6: Regular expression matched 'println'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala:15:8: Regular expression matched 'println'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala:12:6: If block needs braces
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala:9:6: Public method must have explicit type
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Charmax.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Charmax.scala:1: Header does not match expected text
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Charmax.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ignored/IgnoredObject.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ignored/IgnoredObject.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ignored/IgnoredObject.scala:5:21: Regular expression matched 'println'
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ignored/IgnoredObject.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala:14:19: Magic Number
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala:16:45: Magic Number
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala:31:57: Magic Number
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala:23:6: Public method must have explicit type
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala:1: Header does not match expected text
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/TypeTreeObjects.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/TypeTreeObjects.scala:1: Header does not match expected text
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/TypeTreeObjects.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/messages.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/messages.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/messages.scala: File must end with newline character
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/messages.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/DefaultArgumentsObject.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/DefaultArgumentsObject.scala:1: Header does not match expected text
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/DefaultArgumentsObject.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala:12:52: Magic Number
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala: File must end with newline character
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Debugger.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Debugger.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Debugger.scala:38:6: Regular expression matched 'println'
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Debugger.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala: File must end with newline character
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:12:36: Magic Number
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:25:93: Magic Number
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:24:8: Regular expression matched 'println'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:28:6: Regular expression matched 'println'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:30:6: Regular expression matched 'println'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:17:6: Method name does not match the regular expression '^[a-z][A-Za-z0-9]*$'
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:16:6: Public method must have explicit type
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala:21:6: Public method must have explicit type
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/domain.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/domain.scala:1: Header does not match expected text
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/domain.scala:33:6: Public method must have explicit type
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/domain.scala: File must end with newline character
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/domain.scala
+[debug] start file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala:1: Header does not match expected text
+[debug] end file /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala
+[info] scalastyle Processed 18 file(s)
+[info] scalastyle Found 0 errors
+[info] scalastyle Found 51 warnings
+[info] scalastyle Found 0 infos
+[info] scalastyle Finished in 30 ms
+[success] created output: /var/lib/jenkins/workspace/scoverage/target

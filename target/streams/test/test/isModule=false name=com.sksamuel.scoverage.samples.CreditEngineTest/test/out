@@ -1,0 +1,4 @@
+[info] CreditEngineTest:
+[info] a credit engine
+[info] - should approve amounts under the minimum
+[info] - should reject amounts over the min

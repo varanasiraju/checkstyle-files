@@ -1,0 +1,4 @@
+[debug] Copy resource mappings: 
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/test/resources/com,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/test-classes/com)
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/test/resources/com/bomb,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/test-classes/com/bomb)
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/test/resources/com/bomb/scroobius.txt,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/test-classes/com/bomb/scroobius.txt)

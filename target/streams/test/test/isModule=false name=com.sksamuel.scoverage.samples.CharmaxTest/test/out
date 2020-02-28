@@ -1,0 +1,3 @@
+[info] CharmaxTest:
+[info] a char max
+[info] - should not crash the XML writer

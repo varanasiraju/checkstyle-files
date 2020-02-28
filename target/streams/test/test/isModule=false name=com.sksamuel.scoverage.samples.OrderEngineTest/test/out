@@ -1,0 +1,5 @@
+[info] OrderEngineTest:
+[info] an order engine
+[info] - should create an order if credit approved
+[info] - should reject order if credit denied
+[info] - should send a credit request if a quote is available

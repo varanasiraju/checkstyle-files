@@ -1,0 +1,963 @@
+<scoverage 
+statement-count="230" statements-invoked="167" statement-rate="72.61" branch-rate="60.00" version="1.0" timestamp="1582868450740">
+    <packages>
+        <package name="com.sksamuel.scoverage.samples" statement-count="228" statements-invoked="166" statement-rate="72.81">
+            <classes>
+                <class 
+                name="com.sksamuel.scoverage.samples.PriceEngine" filename="com/sksamuel/scoverage/samples/PriceEngine.scala" statement-count="20" statements-invoked="20" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/PriceEngine/receive" statement-count="11" statements-invoked="11" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="565" end="568" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="632" end="673" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="486" end="492" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="499" end="681" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="547" end="563" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="605" end="623" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="565" end="581" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="513" end="681" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="453" end="453" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="547" end="550" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="receive" start="712" end="718" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/PriceEngine/stop" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="stop" start="774" end="794" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="stop" start="743" end="743" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="stop" start="747" end="766" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="stop" start="774" end="794" line="30" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="stop" start="792" end="792" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="stop" start="743" end="743" line="29" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/PriceEngine/preStart" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="preStart" start="840" end="844" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="preStart" start="840" end="859" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="PriceEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.PriceEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/PriceEngine.scala" method="preStart" start="845" end="845" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.QuoteCache" filename="com/sksamuel/scoverage/samples/QuoteCache.scala" statement-count="9" statements-invoked="9" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/QuoteCache/&lt;none&gt;" statement-count="5" statements-invoked="5" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="&lt;none&gt;" start="288" end="304" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="&lt;none&gt;" start="249" end="249" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="&lt;none&gt;" start="144" end="201" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="&lt;none&gt;" start="287" end="287" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="&lt;none&gt;" start="280" end="312" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/QuoteCache/preStart" statement-count="4" statements-invoked="4" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="preStart" start="401" end="419" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="preStart" start="395" end="399" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="preStart" start="394" end="394" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="QuoteCache" class-type="Trait" full-class-name="com.sksamuel.scoverage.samples.QuoteCache" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteCache.scala" method="preStart" start="358" end="420" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.Platform" filename="com/sksamuel/scoverage/samples/Platform.scala" statement-count="20" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/Platform/&lt;none&gt;" statement-count="20" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="313" end="332" line="11" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="502" end="513" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="459" end="528" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="397" end="409" line="12" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="440" end="441" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="250" end="274" line="10" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="354" end="411" line="12" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="429" end="528" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="228" end="248" line="10" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="207" end="276" line="10" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="480" end="500" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="474" end="527" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="375" end="395" line="12" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="515" end="526" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="298" end="333" line="11" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="437" end="437" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="156" end="185" line="8" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="369" end="410" line="12" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="448" end="450" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Platform" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Platform" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Platform.scala" method="&lt;none&gt;" start="222" end="275" line="10" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.CreditEngine" filename="com/sksamuel/scoverage/samples/CreditEngine.scala" statement-count="25" statements-invoked="23" statement-rate="92.00" branch-rate="75.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/CreditEngine/&lt;none&gt;" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="&lt;none&gt;" start="148" end="172" line="7" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/CreditEngine/receive" statement-count="24" statements-invoked="22" statement-rate="91.67" branch-rate="75.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="323" end="330" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="398" end="408" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="416" end="416" line="14" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="309" end="355" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="367" end="409" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="300" end="355" line="12" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="289" end="298" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="460" end="501" line="15" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="229" end="265" line="11" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="420" end="448" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="300" end="355" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="416" end="416" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="389" end="396" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="300" end="306" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="344" end="354" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="374" end="374" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="376" end="409" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="190" end="190" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="367" end="409" line="13" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="307" end="307" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="276" end="298" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="367" end="373" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="460" end="501" line="15" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="CreditEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.CreditEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/CreditEngine.scala" method="receive" start="332" end="342" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.EitherMappableFuture" filename="com/sksamuel/scoverage/samples/Futures.scala" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/EitherMappableFuture/mapEither" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="EitherMappableFuture" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.EitherMappableFuture" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="mapEither" start="993" end="1123" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/EitherMappableFuture/futureToEitherMappable" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="EitherMappableFuture" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.EitherMappableFuture" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="futureToEitherMappable" start="1247" end="1275" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.TypeTreeObjects" filename="com/sksamuel/scoverage/samples/TypeTreeObjects.scala" statement-count="3" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/TypeTreeObjects/&lt;none&gt;" statement-count="3" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="TypeTreeObjects" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.TypeTreeObjects" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/TypeTreeObjects.scala" method="&lt;none&gt;" start="231" end="231" line="8" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="TypeTreeObjects" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.TypeTreeObjects" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/TypeTreeObjects.scala" method="&lt;none&gt;" start="193" end="208" line="8" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="TypeTreeObjects" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.TypeTreeObjects" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/TypeTreeObjects.scala" method="&lt;none&gt;" start="193" end="238" line="8" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.SimpleObject" filename="com/sksamuel/scoverage/samples/SimpleObject.scala" statement-count="17" statements-invoked="7" statement-rate="41.18" branch-rate="33.33">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/SimpleObject/method" statement-count="15" statements-invoked="6" statement-rate="40.00" branch-rate="33.33">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="564" end="571" line="20" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="583" end="594" line="21" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="403" end="415" line="16" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="403" end="415" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="583" end="594" line="21" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="421" end="438" line="16" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="630" end="634" line="23" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="526" end="536" line="19" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="526" end="536" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="374" end="654" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="554" end="571" line="20" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="421" end="438" line="16" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="630" end="634" line="23" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="498" end="514" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="method" start="550" end="654" line="20" branch="true" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/SimpleObject/getOtherSomething" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="getOtherSomething" start="272" end="292" line="12" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/SimpleObject/getSomething" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject.scala" method="getSomething" start="216" end="236" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.SimpleObject2" filename="com/sksamuel/scoverage/samples/SimpleObject2.scala" statement-count="27" statements-invoked="15" statement-rate="55.56" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/SimpleObject2/method2" statement-count="21" statements-invoked="11" statement-rate="52.38" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="1012" end="1016" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="843" end="876" line="35" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="917" end="928" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="1052" end="1056" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="1034" end="1034" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="861" end="875" line="35" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="893" end="952" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="843" end="843" line="35" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="1006" end="1010" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="806" end="1088" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="843" end="843" line="35" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="993" end="1004" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="911" end="915" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="969" end="1017" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="936" end="951" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="1064" end="1080" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="1058" end="1062" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="930" end="934" line="36" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="987" end="991" line="37" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="1034" end="1081" line="38" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method2" start="843" end="843" line="35" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/SimpleObject2/method1" statement-count="6" statements-invoked="4" statement-rate="66.67" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method1" start="507" end="519" line="22" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method1" start="694" end="706" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method1" start="401" end="413" line="19" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method1" start="598" end="610" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method1" start="285" end="285" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="SimpleObject2" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.SimpleObject2" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala" method="method1" start="268" end="733" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.OrderEngine" filename="com/sksamuel/scoverage/samples/OrderEngine.scala" statement-count="25" statements-invoked="25" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/OrderEngine/receive" statement-count="25" statements-invoked="25" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="457" end="469" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="570" end="604" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="720" end="720" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="470" end="470" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="628" end="665" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="226" end="755" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="370" end="384" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="576" end="587" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="706" end="719" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="611" end="665" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="570" end="570" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="722" end="751" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="427" end="448" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="472" end="506" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="653" end="664" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="243" end="243" line="8" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="362" end="515" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="457" end="506" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="626" end="626" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="439" end="448" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="589" end="603" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="740" end="750" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="499" end="505" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="611" end="625" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="OrderEngine" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.OrderEngine" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/OrderEngine.scala" method="receive" start="706" end="751" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.ClientActor" filename="com/sksamuel/scoverage/samples/ClientActor.scala" statement-count="43" statements-invoked="36" statement-rate="83.72" branch-rate="75.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/ClientActor/preStart" statement-count="12" statements-invoked="12" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1233" end="1233" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1194" end="1198" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1213" end="1213" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1251" end="1284" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1235" end="1285" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1142" end="1291" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1176" end="1192" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1221" end="1232" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1194" end="1211" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1235" end="1235" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1221" end="1285" line="36" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="preStart" start="1176" end="1179" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/ClientActor/clientName" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName" start="495" end="506" line="16" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/ClientActor/clientName_=" statement-count="8" statements-invoked="6" statement-rate="75.00" branch-rate="50.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName_=" start="635" end="644" line="19" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName_=" start="650" end="657" line="19" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName_=" start="545" end="560" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName_=" start="603" end="633" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName_=" start="650" end="657" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName_=" start="635" end="644" line="19" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName_=" start="586" end="657" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="clientName_=" start="563" end="583" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/ClientActor/&lt;none&gt;" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="&lt;none&gt;" start="356" end="378" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="&lt;none&gt;" start="460" end="475" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/ClientActor/receive" statement-count="20" statements-invoked="16" statement-rate="80.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="801" end="801" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="675" end="675" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="822" end="838" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="712" end="712" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="928" end="964" line="28" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="840" end="879" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="716" end="736" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="728" end="736" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="803" end="880" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="1004" end="1040" line="30" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="789" end="800" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="738" end="888" line="23" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="859" end="878" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="936" end="963" line="28" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="712" end="712" line="23" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="874" end="877" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="803" end="803" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="1012" end="1039" line="30" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="748" end="780" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="ClientActor" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ClientActor" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ClientActor.scala" method="receive" start="789" end="880" line="25" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" filename="com/sksamuel/scoverage/samples/QuoteGenerator.scala" statement-count="19" statements-invoked="14" statement-rate="73.68" branch-rate="50.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/RandomQuoteGenerator/generate" statement-count="16" statements-invoked="14" statement-rate="87.50" branch-rate="50.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="722" end="745" line="31" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="751" end="770" line="31" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="574" end="583" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="751" end="770" line="31" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="534" end="543" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="551" end="615" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="778" end="821" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="627" end="878" line="29" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="689" end="720" line="31" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="829" end="872" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="722" end="745" line="31" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="605" end="615" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="797" end="820" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="644" end="677" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="848" end="871" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="generate" start="499" end="615" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/RandomQuoteGenerator/&lt;init&gt;" statement-count="3" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="&lt;init&gt;" start="279" end="313" line="15" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="&lt;init&gt;" start="268" end="274" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="RandomQuoteGenerator" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.RandomQuoteGenerator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/QuoteGenerator.scala" method="&lt;init&gt;" start="262" end="262" line="13" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.Charmax" filename="com/sksamuel/scoverage/samples/Charmax.scala" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/Charmax/foo" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Charmax" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.Charmax" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Charmax.scala" method="foo" start="87" end="105" line="4" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.InstrumentLoader" filename="com/sksamuel/scoverage/samples/InstrumentLoader.scala" statement-count="8" statements-invoked="6" statement-rate="75.00" branch-rate="50.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/InstrumentLoader/&lt;none&gt;" statement-count="6" statements-invoked="4" statement-rate="66.67" branch-rate="50.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="InstrumentLoader" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.InstrumentLoader" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala" method="&lt;none&gt;" start="359" end="366" line="12" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="InstrumentLoader" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.InstrumentLoader" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala" method="&lt;none&gt;" start="428" end="438" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="InstrumentLoader" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.InstrumentLoader" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala" method="&lt;none&gt;" start="359" end="366" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="InstrumentLoader" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.InstrumentLoader" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala" method="&lt;none&gt;" start="372" end="381" line="12" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="InstrumentLoader" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.InstrumentLoader" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala" method="&lt;none&gt;" start="327" end="357" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="InstrumentLoader" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.InstrumentLoader" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala" method="&lt;none&gt;" start="372" end="381" line="12" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/InstrumentLoader/randomInstrument" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="InstrumentLoader" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.InstrumentLoader" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala" method="randomInstrument" start="477" end="509" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="InstrumentLoader" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.InstrumentLoader" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/InstrumentLoader.scala" method="randomInstrument" start="491" end="491" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.DefaultArgumentsObject" filename="com/sksamuel/scoverage/samples/DefaultArgumentsObject.scala" statement-count="2" statements-invoked="2" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/DefaultArgumentsObject/makeGreeting" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="DefaultArgumentsObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.DefaultArgumentsObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/DefaultArgumentsObject.scala" method="makeGreeting" start="310" end="325" line="13" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/DefaultArgumentsObject/&lt;none&gt;" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="DefaultArgumentsObject" class-type="Object" full-class-name="com.sksamuel.scoverage.samples.DefaultArgumentsObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/DefaultArgumentsObject.scala" method="&lt;none&gt;" start="235" end="242" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="com.sksamuel.scoverage.samples.Futures" filename="com/sksamuel/scoverage/samples/Futures.scala" statement-count="7" statements-invoked="6" statement-rate="85.71" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/Futures/check" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Futures" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.Futures" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="check" start="570" end="583" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/Futures/meaningful" statement-count="3" statements-invoked="2" statement-rate="66.67" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Futures" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.Futures" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="meaningful" start="670" end="677" line="25" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Futures" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.Futures" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="meaningful" start="626" end="639" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Futures" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.Futures" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="meaningful" start="701" end="709" line="26" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="com.sksamuel.scoverage.samples/Futures/insert" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Futures" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.Futures" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="insert" start="471" end="507" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Futures" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.Futures" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="insert" start="358" end="466" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples" class="Futures" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.Futures" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/Futures.scala" method="insert" start="336" end="353" line="12" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+        <package 
+        name="com.sksamuel.scoverage.samples.ignored" statement-count="1" statements-invoked="0" statement-rate="0.00">
+            <classes>
+                <class 
+                name="com.sksamuel.scoverage.samples.ignored.IgnoredObject" filename="com/sksamuel/scoverage/samples/ignored/IgnoredObject.scala" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                    <methods>
+                        <method 
+                        name="com.sksamuel.scoverage.samples.ignored/IgnoredObject/test" statement-count="1" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="com.sksamuel.scoverage.samples.ignored" class="IgnoredObject" class-type="Class" full-class-name="com.sksamuel.scoverage.samples.ignored.IgnoredObject" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/ignored/IgnoredObject.scala" method="test" start="121" end="148" line="5" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+</package>
+        <package name="subpackage2.validators" statement-count="1" statements-invoked="1" statement-rate="100.00">
+            <classes>
+                <class 
+                name="subpackage2.validators.OrderValidator" filename="com/sksamuel/scoverage/samples/domain.scala" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="subpackage2.validators/OrderValidator/validate" statement-count="1" statements-invoked="1" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="subpackage2.validators" class="OrderValidator" class-type="Class" full-class-name="subpackage2.validators.OrderValidator" source="/var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/domain.scala" method="validate" start="813" end="860" line="33" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

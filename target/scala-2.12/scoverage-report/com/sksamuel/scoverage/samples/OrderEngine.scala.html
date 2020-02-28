@@ -1,0 +1,619 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/OrderEngine.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import akka.actor.{ActorRef, Actor}
+</span>4 <span style=''>
+</span>5 <span style=''>/** @author Stephen Samuel */
+</span>6 <span style=''>class OrderEngine(creditEngine: ActorRef) extends Actor with QuoteCache {
+</span>7 <span style=''>
+</span>8 <span style=''>  def receive: PartialFunction[Any, Unit] = </span><span style='background: #AEF1AE'>behaviour orElse {
+</span>9 <span style=''></span><span style='background: #AEF1AE'>
+</span>10 <span style=''></span><span style='background: #AEF1AE'>    case req: MarketOrderRequest =&gt;
+</span>11 <span style=''></span><span style='background: #AEF1AE'>      // send a credit request only if we have a price for the instrument
+</span>12 <span style=''></span><span style='background: #AEF1AE'>      map.get(req.instrument) foreach (quote =&gt; {
+</span>13 <span style=''></span><span style='background: #AEF1AE'>        val amount = quote.ask * req.units
+</span>14 <span style=''></span><span style='background: #AEF1AE'>        creditEngine ! CreditRequest(amount, req, sender)
+</span>15 <span style=''></span><span style='background: #AEF1AE'>      })
+</span>16 <span style=''></span><span style='background: #AEF1AE'>
+</span>17 <span style=''></span><span style='background: #AEF1AE'>    case approve: CreditApprove =&gt;
+</span>18 <span style=''></span><span style='background: #AEF1AE'>      val order = Order(approve.req, approve.amount)
+</span>19 <span style=''></span><span style='background: #AEF1AE'>      approve.client ! MarketOrderAccept(order, approve.req)
+</span>20 <span style=''></span><span style='background: #AEF1AE'>
+</span>21 <span style=''></span><span style='background: #AEF1AE'>    case reject: CreditReject =&gt;
+</span>22 <span style=''></span><span style='background: #AEF1AE'>      reject.client ! MarketOrderReject(reject.req)
+</span>23 <span style=''></span><span style='background: #AEF1AE'>  }</span><span style=''>
+</span>24 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          113
+        </td>
+        <td>
+          226
+          -
+          755
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.PartialFunction.orElse
+        </td>
+        <td style="background: #AEF1AE">
+          OrderEngine.this.behaviour.orElse[Any, Unit](({
+  @SerialVersionUID(value = 0) final &lt;synthetic&gt; class $anonfun extends scala.runtime.AbstractPartialFunction[Any,Unit] with Serializable {
+    def &lt;init&gt;(): &lt;$anon: Any =&gt; Unit&gt; = {
+      $anonfun.super.&lt;init&gt;();
+      ()
+    };
+    final override def applyOrElse[A1, B1 &gt;: Unit](x1: A1, default: A1 =&gt; B1): B1 = ((x1.asInstanceOf[Any]: Any): Any @unchecked) match {
+      case (req @ (_: com.sksamuel.scoverage.samples.MarketOrderRequest)) =&gt; OrderEngine.this.map.get(req.instrument).foreach[Unit](((quote: com.sksamuel.scoverage.samples.SpotQuote) =&gt; {
+        val amount: scala.math.BigDecimal = quote.ask.*(req.units);
+        actor.this.`package`.actorRef2Scala(OrderEngine.this.creditEngine).!(CreditRequest.apply(amount, req, OrderEngine.this.sender()))(OrderEngine.this.self)
+      }))
+      case (approve @ (_: com.sksamuel.scoverage.samples.CreditApprove)) =&gt; {
+        val order: com.sksamuel.scoverage.samples.Order = Order.apply(approve.req, approve.amount, Order.apply$default$3);
+        actor.this.`package`.actorRef2Scala(approve.client).!(MarketOrderAccept.apply(order, approve.req))(OrderEngine.this.self)
+      }
+      case (reject @ (_: com.sksamuel.scoverage.samples.CreditReject)) =&gt; actor.this.`package`.actorRef2Scala(reject.client).!(MarketOrderReject.apply(reject.req))(OrderEngine.this.self)
+      case (defaultCase$ @ _) =&gt; default.apply(x1)
+    };
+    final def isDefinedAt(x1: Any): Boolean = ((x1.asInstanceOf[Any]: Any): Any @unchecked) match {
+      case (req @ (_: com.sksamuel.scoverage.samples.MarketOrderRequest)) =&gt; true
+      case (approve @ (_: com.sksamuel.scoverage.samples.CreditApprove)) =&gt; true
+      case (reject @ (_: com.sksamuel.scoverage.samples.CreditReject)) =&gt; true
+      case (defaultCase$ @ _) =&gt; false
+    }
+  };
+  new $anonfun()
+}: PartialFunction[Any,Unit]))
+        </td>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          112
+        </td>
+        <td>
+          243
+          -
+          243
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.OrderEngine.$anonfun.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new $anonfun()
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          89
+        </td>
+        <td>
+          370
+          -
+          384
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.MarketOrderRequest.instrument
+        </td>
+        <td style="background: #AEF1AE">
+          req.instrument
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          97
+        </td>
+        <td>
+          362
+          -
+          515
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Option.foreach
+        </td>
+        <td style="background: #AEF1AE">
+          OrderEngine.this.map.get(req.instrument).foreach[Unit](((quote: com.sksamuel.scoverage.samples.SpotQuote) =&gt; {
+  val amount: scala.math.BigDecimal = quote.ask.*(req.units);
+  actor.this.`package`.actorRef2Scala(OrderEngine.this.creditEngine).!(CreditRequest.apply(amount, req, OrderEngine.this.sender()))(OrderEngine.this.self)
+}))
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          91
+        </td>
+        <td>
+          427
+          -
+          448
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.BigDecimal.*
+        </td>
+        <td style="background: #AEF1AE">
+          quote.ask.*(req.units)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          90
+        </td>
+        <td>
+          439
+          -
+          448
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.MarketOrderRequest.units
+        </td>
+        <td style="background: #AEF1AE">
+          req.units
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          92
+        </td>
+        <td>
+          457
+          -
+          469
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.OrderEngine.creditEngine
+        </td>
+        <td style="background: #AEF1AE">
+          OrderEngine.this.creditEngine
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          95
+        </td>
+        <td>
+          470
+          -
+          470
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          OrderEngine.this.self
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          94
+        </td>
+        <td>
+          472
+          -
+          506
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditRequest.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CreditRequest.apply(amount, req, OrderEngine.this.sender())
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          96
+        </td>
+        <td>
+          457
+          -
+          506
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(OrderEngine.this.creditEngine).!(CreditRequest.apply(amount, req, OrderEngine.this.sender()))(OrderEngine.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          93
+        </td>
+        <td>
+          499
+          -
+          505
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Actor.sender
+        </td>
+        <td style="background: #AEF1AE">
+          OrderEngine.this.sender()
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          101
+        </td>
+        <td>
+          570
+          -
+          604
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Order.apply
+        </td>
+        <td style="background: #AEF1AE">
+          Order.apply(approve.req, approve.amount, Order.apply$default$3)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          98
+        </td>
+        <td>
+          576
+          -
+          587
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditApprove.req
+        </td>
+        <td style="background: #AEF1AE">
+          approve.req
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          100
+        </td>
+        <td>
+          570
+          -
+          570
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Order.apply$default$3
+        </td>
+        <td style="background: #AEF1AE">
+          Order.apply$default$3
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          99
+        </td>
+        <td>
+          589
+          -
+          603
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditApprove.amount
+        </td>
+        <td style="background: #AEF1AE">
+          approve.amount
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          104
+        </td>
+        <td>
+          628
+          -
+          665
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.MarketOrderAccept.apply
+        </td>
+        <td style="background: #AEF1AE">
+          MarketOrderAccept.apply(order, approve.req)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          106
+        </td>
+        <td>
+          611
+          -
+          665
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(approve.client).!(MarketOrderAccept.apply(order, approve.req))(OrderEngine.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          103
+        </td>
+        <td>
+          653
+          -
+          664
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditApprove.req
+        </td>
+        <td style="background: #AEF1AE">
+          approve.req
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          105
+        </td>
+        <td>
+          626
+          -
+          626
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          OrderEngine.this.self
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          102
+        </td>
+        <td>
+          611
+          -
+          625
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditApprove.client
+        </td>
+        <td style="background: #AEF1AE">
+          approve.client
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          110
+        </td>
+        <td>
+          720
+          -
+          720
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          OrderEngine.this.self
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          107
+        </td>
+        <td>
+          706
+          -
+          719
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditReject.client
+        </td>
+        <td style="background: #AEF1AE">
+          reject.client
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          109
+        </td>
+        <td>
+          722
+          -
+          751
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.MarketOrderReject.apply
+        </td>
+        <td style="background: #AEF1AE">
+          MarketOrderReject.apply(reject.req)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          108
+        </td>
+        <td>
+          740
+          -
+          750
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditReject.req
+        </td>
+        <td style="background: #AEF1AE">
+          reject.req
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          111
+        </td>
+        <td>
+          706
+          -
+          751
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(reject.client).!(MarketOrderReject.apply(reject.req))(OrderEngine.this.self)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

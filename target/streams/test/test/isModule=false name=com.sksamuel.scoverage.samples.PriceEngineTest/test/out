@@ -1,0 +1,5 @@
+[info] PriceEngineTest:
+[info] a price engine
+[info] - should broadcast on startup
+[info] - should stop broadcasting on StopService msg
+[info] - should restart broadcasting on StartService message

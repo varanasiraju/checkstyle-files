@@ -1,0 +1,235 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/InstrumentLoader.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.util.Random
+</span>4 <span style=''>import java.util.Date
+</span>5 <span style=''>import org.apache.commons.io.IOUtils
+</span>6 <span style=''>import scala.collection.JavaConverters._
+</span>7 <span style=''>
+</span>8 <span style=''>/** @author Stephen Samuel */
+</span>9 <span style=''>object InstrumentLoader {
+</span>10 <span style=''>
+</span>11 <span style=''>  // this is here just to show the single line per statement colouring
+</span>12 <span style=''>  val beautifulTopLevelVal = if (</span><span style='background: #AEF1AE'>System.currentTimeMillis() &gt; 0</span><span style=''>) </span><span style='background: #AEF1AE'>&quot;hello&quot;</span><span style=''> else </span><span style='background: #F0ADAD'>&quot;goodbye&quot;</span><span style=''>
+</span>13 <span style=''>
+</span>14 <span style=''>  // testing new statements
+</span>15 <span style=''>  val loadTime = </span><span style='background: #AEF1AE'>new Date()</span><span style=''>
+</span>16 <span style=''>
+</span>17 <span style=''>  def randomInstrument: Instrument = </span><span style='background: #AEF1AE'>Random.shuffle(instruments).head</span><span style=''>
+</span>18 <span style=''>
+</span>19 <span style=''>  lazy val instruments = {
+</span>20 <span style=''>    IOUtils.readLines(getClass.getResourceAsStream(&quot;/com/sksamuel/scoverage/dow.csv&quot;), &quot;UTF-8&quot;).asScala
+</span>21 <span style=''>      .map(line =&gt; {
+</span>22 <span style=''>      val tokens = line.split(',')
+</span>23 <span style=''>      Instrument(tokens(0).trim, tokens(1).trim)
+</span>24 <span style=''>    }).toSet
+</span>25 <span style=''>  }
+</span>26 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          83
+        </td>
+        <td>
+          359
+          -
+          366
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;hello&quot;
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          82
+        </td>
+        <td>
+          359
+          -
+          366
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;hello&quot;
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          85
+        </td>
+        <td>
+          372
+          -
+          381
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;goodbye&quot;
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          81
+        </td>
+        <td>
+          327
+          -
+          357
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Long.&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          java.lang.System.currentTimeMillis().&gt;(0)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          84
+        </td>
+        <td>
+          372
+          -
+          381
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;goodbye&quot;
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          86
+        </td>
+        <td>
+          428
+          -
+          438
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.util.Date.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new java.util.Date()
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          88
+        </td>
+        <td>
+          477
+          -
+          509
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.IterableLike.head
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Random.shuffle[com.sksamuel.scoverage.samples.Instrument, scala.collection.immutable.Set](InstrumentLoader.this.instruments)(immutable.this.Set.canBuildFrom[com.sksamuel.scoverage.samples.Instrument]).head
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          87
+        </td>
+        <td>
+          491
+          -
+          491
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.Set.canBuildFrom
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.Set.canBuildFrom[com.sksamuel.scoverage.samples.Instrument]
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

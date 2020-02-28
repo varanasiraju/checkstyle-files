@@ -1,0 +1,989 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/ClientActor.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import akka.actor.{ActorRef, Actor}
+</span>4 <span style=''>import scala.util.Random
+</span>5 <span style=''>import scala.concurrent.duration._
+</span>6 <span style=''>import scala.concurrent.ExecutionContext.Implicits.global
+</span>7 <span style=''>import scala.language.postfixOps
+</span>8 <span style=''>
+</span>9 <span style=''>/** @author Stephen Samuel */
+</span>10 <span style=''>class ClientActor(priceEngine: ActorRef, orderEngine: ActorRef) extends Actor {
+</span>11 <span style=''>
+</span>12 <span style=''>  val MinPrice = </span><span style='background: #AEF1AE'>BigDecimal.valueOf(50)</span><span style=''>
+</span>13 <span style=''>
+</span>14 <span style=''>  // testing for custom setters and getters
+</span>15 <span style=''>  private var _clientName: String = </span><span style='background: #AEF1AE'>&quot;DoIHaveAName?&quot;</span><span style=''>
+</span>16 <span style=''>  def clientName = </span><span style='background: #F0ADAD'>_clientName</span><span style=''>
+</span>17 <span style=''>  def clientName_=(n: String): Unit = </span><span style='background: #AEF1AE'>_clientName = n</span><span style=''>
+</span>18 <span style=''>  </span><span style='background: #AEF1AE'>clientName = &quot;sammy&quot;</span><span style=''>
+</span>19 <span style=''>  </span><span style='background: #AEF1AE'>clientName = if (System.currentTimeMillis() &lt; 0) </span><span style='background: #F0ADAD'>&quot;charlie&quot;</span><span style='background: #AEF1AE'> else &quot;bobby&quot;</span><span style=''>
+</span>20 <span style=''>
+</span>21 <span style=''>  def receive = {
+</span>22 <span style=''>    case quote: SpotQuote =&gt;
+</span>23 <span style=''>      if (</span><span style='background: #AEF1AE'>quote.ask &lt; MinPrice</span><span style=''>) </span><span style='background: #AEF1AE'>{
+</span>24 <span style=''></span><span style='background: #AEF1AE'>        println(&quot;Sending order request&quot;)
+</span>25 <span style=''></span><span style='background: #AEF1AE'>        orderEngine ! MarketOrderRequest(quote.instrument, BigDecimal.valueOf(Random.nextInt(100)))
+</span>26 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
+</span>27 <span style=''>    case r: MarketOrderReject =&gt;
+</span>28 <span style=''>      </span><span style='background: #F0ADAD'>println(&quot;Order was rejected :(&quot; + r)</span><span style=''>
+</span>29 <span style=''>    case a: MarketOrderAccept =&gt;
+</span>30 <span style=''>      </span><span style='background: #F0ADAD'>println(&quot;Order was accepted :)&quot; + a)</span><span style=''>
+</span>31 <span style=''>  }
+</span>32 <span style=''>
+</span>33 <span style=''>  override def preStart(): Unit = {
+</span>34 <span style=''>    // ask for a quote every second for a random equity
+</span>35 <span style=''>    </span><span style='background: #AEF1AE'>context.system.scheduler.schedule(100 milliseconds, 1000 milliseconds) {
+</span>36 <span style=''></span><span style='background: #AEF1AE'>      priceEngine ! RequestForQuote(InstrumentLoader.randomInstrument)
+</span>37 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>38 <span style=''>  }
+</span>39 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          356
+          -
+          378
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.BigDecimal.valueOf
+        </td>
+        <td style="background: #AEF1AE">
+          scala.`package`.BigDecimal.valueOf(50L)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          460
+          -
+          475
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;DoIHaveAName?&quot;
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          495
+          -
+          506
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.ClientActor._clientName
+        </td>
+        <td style="background: #F0ADAD">
+          ClientActor.this._clientName
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          545
+          -
+          560
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.ClientActor._clientName_=
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this._clientName_=(n)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          563
+          -
+          583
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.ClientActor.clientName_=
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this.clientName_=(&quot;sammy&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          635
+          -
+          644
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;charlie&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          650
+          -
+          657
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;bobby&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          603
+          -
+          633
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Long.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          java.lang.System.currentTimeMillis().&lt;(0)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          650
+          -
+          657
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;bobby&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          635
+          -
+          644
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;charlie&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          586
+          -
+          657
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.ClientActor.clientName_=
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this.clientName_=(if (java.lang.System.currentTimeMillis().&lt;(0))
+  &quot;charlie&quot;
+else
+  &quot;bobby&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          675
+          -
+          675
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.ClientActor.$anonfun.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new $anonfun()
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          712
+          -
+          712
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          716
+          -
+          736
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.Ordered.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          quote.ask.&lt;(ClientActor.this.MinPrice)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          728
+          -
+          736
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.ClientActor.MinPrice
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this.MinPrice
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          738
+          -
+          888
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          {
+  scala.Predef.println(&quot;Sending order request&quot;);
+  actor.this.`package`.actorRef2Scala(ClientActor.this.orderEngine).!(MarketOrderRequest.apply(quote.instrument, scala.`package`.BigDecimal.valueOf(scala.util.Random.nextInt(100).toLong), MarketOrderRequest.apply$default$3))(ClientActor.this.self)
+}
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          712
+          -
+          712
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          748
+          -
+          780
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Sending order request&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          801
+          -
+          801
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this.self
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          822
+          -
+          838
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SpotQuote.instrument
+        </td>
+        <td style="background: #AEF1AE">
+          quote.instrument
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          840
+          -
+          879
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.BigDecimal.valueOf
+        </td>
+        <td style="background: #AEF1AE">
+          scala.`package`.BigDecimal.valueOf(scala.util.Random.nextInt(100).toLong)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          803
+          -
+          880
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.MarketOrderRequest.apply
+        </td>
+        <td style="background: #AEF1AE">
+          MarketOrderRequest.apply(quote.instrument, scala.`package`.BigDecimal.valueOf(scala.util.Random.nextInt(100).toLong), MarketOrderRequest.apply$default$3)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          789
+          -
+          800
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.ClientActor.orderEngine
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this.orderEngine
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          859
+          -
+          878
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Int.toLong
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Random.nextInt(100).toLong
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          874
+          -
+          877
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          100
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          803
+          -
+          803
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.MarketOrderRequest.apply$default$3
+        </td>
+        <td style="background: #AEF1AE">
+          MarketOrderRequest.apply$default$3
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          789
+          -
+          880
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(ClientActor.this.orderEngine).!(MarketOrderRequest.apply(quote.instrument, scala.`package`.BigDecimal.valueOf(scala.util.Random.nextInt(100).toLong), MarketOrderRequest.apply$default$3))(ClientActor.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          928
+          -
+          964
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;Order was rejected :(&quot;.+(r))
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          936
+          -
+          963
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;Order was rejected :(&quot;.+(r)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          1004
+          -
+          1040
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;Order was accepted :)&quot;.+(a))
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          1012
+          -
+          1039
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.+
+        </td>
+        <td style="background: #F0ADAD">
+          &quot;Order was accepted :)&quot;.+(a)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          1194
+          -
+          1198
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          1000
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          1213
+          -
+          1213
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          1142
+          -
+          1291
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.Scheduler.schedule
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this.context.system.scheduler.schedule(scala.concurrent.duration.`package`.DurationInt(100).milliseconds, scala.concurrent.duration.`package`.DurationInt(1000).milliseconds)(actor.this.`package`.actorRef2Scala(ClientActor.this.priceEngine).!(RequestForQuote.apply(InstrumentLoader.randomInstrument, RequestForQuote.apply$default$2))(ClientActor.this.self))(scala.concurrent.ExecutionContext.Implicits.global)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          1176
+          -
+          1192
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.concurrent.duration.DurationConversions.milliseconds
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.duration.`package`.DurationInt(100).milliseconds
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          1194
+          -
+          1211
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.concurrent.duration.DurationConversions.milliseconds
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.duration.`package`.DurationInt(1000).milliseconds
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          1176
+          -
+          1179
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          100
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          1233
+          -
+          1233
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this.self
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          1251
+          -
+          1284
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.InstrumentLoader.randomInstrument
+        </td>
+        <td style="background: #AEF1AE">
+          InstrumentLoader.randomInstrument
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          1235
+          -
+          1285
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.RequestForQuote.apply
+        </td>
+        <td style="background: #AEF1AE">
+          RequestForQuote.apply(InstrumentLoader.randomInstrument, RequestForQuote.apply$default$2)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          1221
+          -
+          1232
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.ClientActor.priceEngine
+        </td>
+        <td style="background: #AEF1AE">
+          ClientActor.this.priceEngine
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          1235
+          -
+          1235
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.RequestForQuote.apply$default$2
+        </td>
+        <td style="background: #AEF1AE">
+          RequestForQuote.apply$default$2
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          1221
+          -
+          1285
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(ClientActor.this.priceEngine).!(RequestForQuote.apply(InstrumentLoader.randomInstrument, RequestForQuote.apply$default$2))(ClientActor.this.self)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

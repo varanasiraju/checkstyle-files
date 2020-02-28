@@ -1,0 +1,438 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/SimpleObject.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>/** @author Stephen Samuel */
+</span>4 <span style=''>
+</span>5 <span style=''>import scala.concurrent.{ExecutionContext, Future}
+</span>6 <span style=''>import ExecutionContext.Implicits.global
+</span>7 <span style=''>
+</span>8 <span style=''>object SimpleObject {
+</span>9 <span style=''>
+</span>10 <span style=''>  private def getSomething = </span><span style='background: #AEF1AE'>Future.successful(3)</span><span style=''>
+</span>11 <span style=''>
+</span>12 <span style=''>  private def getOtherSomething = </span><span style='background: #F0ADAD'>Future.successful(5)</span><span style=''>
+</span>13 <span style=''>
+</span>14 <span style=''>  def method(input1: Boolean, input2: Boolean): Future[Option[Boolean]] = {
+</span>15 <span style=''>    </span><span style='background: #AEF1AE'>for {
+</span>16 <span style=''></span><span style='background: #AEF1AE'>      b &lt;- if (input1) getSomething else </span><span style='background: #F0ADAD'>getOtherSomething</span><span style='background: #AEF1AE'> // this else should not be covered
+</span>17 <span style=''></span><span style='background: #AEF1AE'>    } yield {
+</span>18 <span style=''></span><span style='background: #AEF1AE'>      if (input1 &amp;&amp; input2) {
+</span>19 <span style=''></span><span style='background: #AEF1AE'>        Some(true)
+</span>20 <span style=''></span><span style='background: #AEF1AE'>      } else </span><span style='background: #F0ADAD'>if (input1 &amp;&amp; !input2) {
+</span>21 <span style=''></span><span style='background: #F0ADAD'>        Some(false) // this too
+</span>22 <span style=''></span><span style='background: #F0ADAD'>      } else {
+</span>23 <span style=''></span><span style='background: #F0ADAD'>        None // this too
+</span>24 <span style=''></span><span style='background: #F0ADAD'>      }</span><span style=''>
+</span>25 <span style=''>    }
+</span>26 <span style=''>  }
+</span>27 <span style=''>
+</span>28 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          182
+        </td>
+        <td>
+          216
+          -
+          236
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.concurrent.Future.successful
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.Future.successful[Int](3)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          183
+        </td>
+        <td>
+          272
+          -
+          292
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.concurrent.Future.successful
+        </td>
+        <td style="background: #F0ADAD">
+          scala.concurrent.Future.successful[Int](5)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          185
+        </td>
+        <td>
+          403
+          -
+          415
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject.getSomething
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleObject.this.getSomething
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          184
+        </td>
+        <td>
+          403
+          -
+          415
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject.getSomething
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleObject.this.getSomething
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          187
+        </td>
+        <td>
+          421
+          -
+          438
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject.getOtherSomething
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleObject.this.getOtherSomething
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          198
+        </td>
+        <td>
+          374
+          -
+          654
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.map
+        </td>
+        <td style="background: #AEF1AE">
+          if (input1)
+  SimpleObject.this.getSomething
+else
+  SimpleObject.this.getOtherSomething.map[Option[Boolean]](((b: Int) =&gt; if (input1.&amp;&amp;(input2))
+  scala.Some.apply[Boolean](true)
+else
+  if (input1.&amp;&amp;(input2.unary_!))
+    scala.Some.apply[Boolean](false)
+  else
+    scala.None))(scala.concurrent.ExecutionContext.Implicits.global)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          186
+        </td>
+        <td>
+          421
+          -
+          438
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject.getOtherSomething
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleObject.this.getOtherSomething
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          188
+        </td>
+        <td>
+          498
+          -
+          514
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #AEF1AE">
+          input1.&amp;&amp;(input2)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          190
+        </td>
+        <td>
+          526
+          -
+          536
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Boolean](true)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          189
+        </td>
+        <td>
+          526
+          -
+          536
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Boolean](true)
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          191
+        </td>
+        <td>
+          564
+          -
+          571
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Boolean.unary_!
+        </td>
+        <td style="background: #F0ADAD">
+          input2.unary_!
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          192
+        </td>
+        <td>
+          554
+          -
+          571
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td style="background: #F0ADAD">
+          input1.&amp;&amp;(input2.unary_!)
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          197
+        </td>
+        <td>
+          550
+          -
+          654
+        </td>
+        <td>
+          If
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          if (input1.&amp;&amp;(input2.unary_!))
+  scala.Some.apply[Boolean](false)
+else
+  scala.None
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          194
+        </td>
+        <td>
+          583
+          -
+          594
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Some.apply[Boolean](false)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          193
+        </td>
+        <td>
+          583
+          -
+          594
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Some.apply[Boolean](false)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          196
+        </td>
+        <td>
+          630
+          -
+          634
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          195
+        </td>
+        <td>
+          630
+          -
+          634
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

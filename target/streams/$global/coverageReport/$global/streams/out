@@ -1,0 +1,12 @@
+[info] Waiting for measurement data to sync...
+[info] Reading scoverage instrumentation [/var/lib/jenkins/workspace/scoverage/target/scala-2.12/scoverage-data/scoverage.coverage.xml]
+[info] Reading scoverage measurements...
+[info] Generating scoverage reports...
+[info] Written Cobertura report [/var/lib/jenkins/workspace/scoverage/target/scala-2.12/coverage-report/cobertura.xml]
+[info] Written XML coverage report [/var/lib/jenkins/workspace/scoverage/target/scala-2.12/scoverage-report/scoverage.xml]
+[info] Written HTML coverage report [/var/lib/jenkins/workspace/scoverage/target/scala-2.12/scoverage-report/index.html]
+[info] Statement coverage.: 72.61%
+[info] Branch coverage....: 60.00%
+[info] Coverage reports completed
+[info] Coverage is above minimum [72.61% > 70.0%]
+[info] All done. Coverage was [72.61%]

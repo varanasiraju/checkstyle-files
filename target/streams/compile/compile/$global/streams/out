@@ -1,0 +1,10 @@
+[info] [info] Cleaning datadir [/var/lib/jenkins/workspace/scoverage/target/scala-2.12/scoverage-data]
+[info] [info] Beginning coverage instrumentation
+[info] [info] Instrumentation completed [230 statements]
+[info] [info] Wrote instrumentation file [/var/lib/jenkins/workspace/scoverage/target/scala-2.12/scoverage-data/scoverage.coverage.xml]
+[info] [info] Will write measurement data to [/var/lib/jenkins/workspace/scoverage/target/scala-2.12/scoverage-data]
+[warn] /var/lib/jenkins/workspace/scoverage/src/main/scala/com/sksamuel/scoverage/samples/SimpleObject2.scala:17:7: match may not be exhaustive.
+[warn] It would fail on the following inputs: LoginSignupResult(None, None, None, None), LoginSignupResult(None, None, None, Some(_))
+[warn]       auth match {
+[warn]       ^
+[warn] one warning found

@@ -1,0 +1,248 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/QuoteCache.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import akka.actor.Actor
+</span>4 <span style=''>
+</span>5 <span style=''>/** @author Stephen Samuel */
+</span>6 <span style=''>trait QuoteCache {
+</span>7 <span style=''>  this: Actor =&gt;
+</span>8 <span style=''>
+</span>9 <span style=''>  val map = </span><span style='background: #AEF1AE'>scala.collection.mutable.Map.empty[Instrument, SpotQuote]</span><span style=''>
+</span>10 <span style=''>
+</span>11 <span style=''>  val behaviour: PartialFunction[Any, Unit] = {
+</span>12 <span style=''>    case quote: SpotQuote =&gt; </span><span style='background: #AEF1AE'>map.put(quote.instrument, quote)</span><span style=''>
+</span>13 <span style=''>  }
+</span>14 <span style=''>
+</span>15 <span style=''>  override def preStart(): Unit = {
+</span>16 <span style=''>    </span><span style='background: #AEF1AE'>context.system.eventStream.subscribe(self, classOf[SpotQuote])</span><span style=''>
+</span>17 <span style=''>  }
+</span>18 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          154
+        </td>
+        <td>
+          144
+          -
+          201
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.mutable.Map.empty
+        </td>
+        <td style="background: #AEF1AE">
+          scala.collection.mutable.Map.empty[com.sksamuel.scoverage.samples.Instrument, com.sksamuel.scoverage.samples.SpotQuote]
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          158
+        </td>
+        <td>
+          249
+          -
+          249
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.QuoteCache.$anonfun.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new $anonfun()
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          155
+        </td>
+        <td>
+          288
+          -
+          304
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SpotQuote.instrument
+        </td>
+        <td style="background: #AEF1AE">
+          quote.instrument
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          157
+        </td>
+        <td>
+          287
+          -
+          287
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          156
+        </td>
+        <td>
+          280
+          -
+          312
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.mutable.MapLike.put
+        </td>
+        <td style="background: #AEF1AE">
+          QuoteCache.this.map.put(quote.instrument, quote)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          160
+        </td>
+        <td>
+          401
+          -
+          419
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          classOf[com.sksamuel.scoverage.samples.SpotQuote]
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          159
+        </td>
+        <td>
+          395
+          -
+          399
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          QuoteCache.this.self
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          162
+        </td>
+        <td>
+          394
+          -
+          394
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          161
+        </td>
+        <td>
+          358
+          -
+          420
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.event.EventStream.subscribe
+        </td>
+        <td style="background: #AEF1AE">
+          QuoteCache.this.context.system.eventStream.subscribe(QuoteCache.this.self, classOf[com.sksamuel.scoverage.samples.SpotQuote])
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

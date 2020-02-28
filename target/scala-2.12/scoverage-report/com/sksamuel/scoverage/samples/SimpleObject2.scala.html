@@ -1,0 +1,676 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/SimpleObject2.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.concurrent.{ExecutionContext, Future}
+</span>4 <span style=''>import ExecutionContext.Implicits.global
+</span>5 <span style=''>
+</span>6 <span style=''>/**
+</span>7 <span style=''> *
+</span>8 <span style=''> * https://github.com/scoverage/scalac-scoverage-plugin/issues/4
+</span>9 <span style=''> *
+</span>10 <span style=''> */
+</span>11 <span style=''>object SimpleObject2 {
+</span>12 <span style=''>
+</span>13 <span style=''>  def method1(input: Int) {
+</span>14 <span style=''>    </span><span style='background: #AEF1AE'>for {
+</span>15 <span style=''></span><span style='background: #AEF1AE'>      auth &lt;- method2(input)
+</span>16 <span style=''></span><span style='background: #AEF1AE'>    } yield
+</span>17 <span style=''></span><span style='background: #AEF1AE'>      auth match {
+</span>18 <span style=''></span><span style='background: #AEF1AE'>        case LoginSignupResult(Some(result), _, _, _) =&gt;
+</span>19 <span style=''></span><span style='background: #AEF1AE'>          </span><span style='background: #F0ADAD'>println(&quot;1&quot;)</span><span style='background: #AEF1AE'>
+</span>20 <span style=''></span><span style='background: #AEF1AE'>          result
+</span>21 <span style=''></span><span style='background: #AEF1AE'>        case LoginSignupResult(_, Some(url), _, Some(session)) =&gt;
+</span>22 <span style=''></span><span style='background: #AEF1AE'>          </span><span style='background: #F0ADAD'>println(&quot;2&quot;)</span><span style='background: #AEF1AE'>
+</span>23 <span style=''></span><span style='background: #AEF1AE'>          url
+</span>24 <span style=''></span><span style='background: #AEF1AE'>        case LoginSignupResult(_, Some(url), _, _) =&gt;
+</span>25 <span style=''></span><span style='background: #AEF1AE'>          println(&quot;3&quot;)
+</span>26 <span style=''></span><span style='background: #AEF1AE'>          url
+</span>27 <span style=''></span><span style='background: #AEF1AE'>        case LoginSignupResult(_, _, Some(authUser), _) =&gt;
+</span>28 <span style=''></span><span style='background: #AEF1AE'>          println(&quot;4&quot;)
+</span>29 <span style=''></span><span style='background: #AEF1AE'>          authUser
+</span>30 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
+</span>31 <span style=''>  }
+</span>32 <span style=''>
+</span>33 <span style=''>  private def method2(input: Int): Future[LoginSignupResult] =
+</span>34 <span style=''>    </span><span style='background: #AEF1AE'>Future(input match {
+</span>35 <span style=''></span><span style='background: #AEF1AE'>      case 1 =&gt; </span><span style='background: #F0ADAD'>LoginSignupResult(Some(&quot;result&quot;))</span><span style='background: #AEF1AE'>
+</span>36 <span style=''></span><span style='background: #AEF1AE'>      case 2 =&gt; </span><span style='background: #F0ADAD'>LoginSignupResult(None, Some(&quot;url&quot;), None, Some(&quot;session&quot;))</span><span style='background: #AEF1AE'>
+</span>37 <span style=''></span><span style='background: #AEF1AE'>      case 3 =&gt; LoginSignupResult(None, Some(&quot;url&quot;), None, None)
+</span>38 <span style=''></span><span style='background: #AEF1AE'>      case 4 =&gt; LoginSignupResult(None, None, Some(&quot;authuser&quot;))
+</span>39 <span style=''></span><span style='background: #AEF1AE'>    })</span><span style=''>
+</span>40 <span style=''>
+</span>41 <span style=''>  private case class LoginSignupResult(result: Option[String] = None,
+</span>42 <span style=''>                                       url: Option[String] = None, authUser: Option[String] = None,
+</span>43 <span style=''>                                       session: Option[String] = None) {
+</span>44 <span style=''>  }
+</span>45 <span style=''>
+</span>46 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          204
+        </td>
+        <td>
+          285
+          -
+          285
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          203
+        </td>
+        <td>
+          268
+          -
+          733
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.map
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleObject2.this.method2(input).map[String](((auth: com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult) =&gt; auth match {
+  case (result: Option[String], url: Option[String], authUser: Option[String], session: Option[String])com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult((value: String)Some[String]((result @ _)), _, _, _) =&gt; {
+    scala.Predef.println(&quot;1&quot;);
+    result
+  }
+  case (result: Option[String], url: Option[String], authUser: Option[String], session: Option[String])com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult(_, (value: String)Some[String]((url @ _)), _, (value: String)Some[String]((session @ _))) =&gt; {
+    scala.Predef.println(&quot;2&quot;);
+    url
+  }
+  case (result: Option[String], url: Option[String], authUser: Option[String], session: Option[String])com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult(_, (value: String)Some[String]((url @ _)), _, _) =&gt; {
+    scala.Predef.println(&quot;3&quot;);
+    url
+  }
+  case (result: Option[String], url: Option[String], authUser: Option[String], session: Option[String])com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult(_, _, (value: String)Some[String]((authUser @ _)), _) =&gt; {
+    scala.Predef.println(&quot;4&quot;);
+    authUser
+  }
+}))(scala.concurrent.ExecutionContext.Implicits.global)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          199
+        </td>
+        <td>
+          401
+          -
+          413
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;1&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          200
+        </td>
+        <td>
+          507
+          -
+          519
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;2&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          201
+        </td>
+        <td>
+          598
+          -
+          610
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;3&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          202
+        </td>
+        <td>
+          694
+          -
+          706
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;4&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          225
+        </td>
+        <td>
+          806
+          -
+          1088
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.Future.apply[com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult](input match {
+  case 1 =&gt; SimpleObject2.this.LoginSignupResult.apply(scala.Some.apply[String](&quot;result&quot;), SimpleObject2.this.LoginSignupResult.apply$default$2, SimpleObject2.this.LoginSignupResult.apply$default$3, SimpleObject2.this.LoginSignupResult.apply$default$4)
+  case 2 =&gt; SimpleObject2.this.LoginSignupResult.apply(scala.None, scala.Some.apply[String](&quot;url&quot;), scala.None, scala.Some.apply[String](&quot;session&quot;))
+  case 3 =&gt; SimpleObject2.this.LoginSignupResult.apply(scala.None, scala.Some.apply[String](&quot;url&quot;), scala.None, scala.None)
+  case 4 =&gt; SimpleObject2.this.LoginSignupResult.apply(scala.None, scala.None, scala.Some.apply[String](&quot;authuser&quot;), SimpleObject2.this.LoginSignupResult.apply$default$4)
+})(scala.concurrent.ExecutionContext.Implicits.global)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          209
+        </td>
+        <td>
+          843
+          -
+          876
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult.apply
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleObject2.this.LoginSignupResult.apply(scala.Some.apply[String](&quot;result&quot;), SimpleObject2.this.LoginSignupResult.apply$default$2, SimpleObject2.this.LoginSignupResult.apply$default$3, SimpleObject2.this.LoginSignupResult.apply$default$4)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          205
+        </td>
+        <td>
+          861
+          -
+          875
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Some.apply[String](&quot;result&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          208
+        </td>
+        <td>
+          843
+          -
+          843
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult.apply$default$4
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleObject2.this.LoginSignupResult.apply$default$4
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          207
+        </td>
+        <td>
+          843
+          -
+          843
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult.apply$default$3
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleObject2.this.LoginSignupResult.apply$default$3
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          206
+        </td>
+        <td>
+          843
+          -
+          843
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult.apply$default$2
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleObject2.this.LoginSignupResult.apply$default$2
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          211
+        </td>
+        <td>
+          917
+          -
+          928
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Some.apply[String](&quot;url&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          214
+        </td>
+        <td>
+          893
+          -
+          952
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult.apply
+        </td>
+        <td style="background: #F0ADAD">
+          SimpleObject2.this.LoginSignupResult.apply(scala.None, scala.Some.apply[String](&quot;url&quot;), scala.None, scala.Some.apply[String](&quot;session&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          210
+        </td>
+        <td>
+          911
+          -
+          915
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          213
+        </td>
+        <td>
+          936
+          -
+          951
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Some.apply[String](&quot;session&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          212
+        </td>
+        <td>
+          930
+          -
+          934
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          218
+        </td>
+        <td>
+          1012
+          -
+          1016
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          217
+        </td>
+        <td>
+          1006
+          -
+          1010
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          216
+        </td>
+        <td>
+          993
+          -
+          1004
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[String](&quot;url&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          219
+        </td>
+        <td>
+          969
+          -
+          1017
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult.apply
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleObject2.this.LoginSignupResult.apply(scala.None, scala.Some.apply[String](&quot;url&quot;), scala.None, scala.None)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          215
+        </td>
+        <td>
+          987
+          -
+          991
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          220
+        </td>
+        <td>
+          1052
+          -
+          1056
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          223
+        </td>
+        <td>
+          1034
+          -
+          1034
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult.apply$default$4
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleObject2.this.LoginSignupResult.apply$default$4
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          222
+        </td>
+        <td>
+          1064
+          -
+          1080
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[String](&quot;authuser&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          221
+        </td>
+        <td>
+          1058
+          -
+          1062
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          38
+        </td>
+        <td>
+          224
+        </td>
+        <td>
+          1034
+          -
+          1081
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SimpleObject2.LoginSignupResult.apply
+        </td>
+        <td style="background: #AEF1AE">
+          SimpleObject2.this.LoginSignupResult.apply(scala.None, scala.None, scala.Some.apply[String](&quot;authuser&quot;), SimpleObject2.this.LoginSignupResult.apply$default$4)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

@@ -1,0 +1,476 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/Platform.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import akka.actor.{Props, ActorSystem}
+</span>4 <span style=''>
+</span>5 <span style=''>/** @author Stephen Samuel */
+</span>6 <span style=''>object Platform extends App {
+</span>7 <span style=''>
+</span>8 <span style=''>  val system = </span><span style='background: #F0ADAD'>ActorSystem(&quot;scoverage-test&quot;)</span><span style=''>
+</span>9 <span style=''>
+</span>10 <span style=''>  val priceEngine = </span><span style='background: #F0ADAD'>system.actorOf(Props(classOf[PriceEngine], new RandomQuoteGenerator))</span><span style=''>
+</span>11 <span style=''>  val creditEngine = </span><span style='background: #F0ADAD'>system.actorOf(Props[CreditEngine])</span><span style=''>
+</span>12 <span style=''>  val orderEngine = </span><span style='background: #F0ADAD'>system.actorOf(Props(classOf[OrderEngine], creditEngine))</span><span style=''>
+</span>13 <span style=''>
+</span>14 <span style=''>  val clients = </span><span style='background: #F0ADAD'>for ( k &lt;- 0 until 10 ) yield system.actorOf(Props(classOf[ClientActor], priceEngine, orderEngine))</span><span style=''>
+</span>15 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          8
+        </td>
+        <td>
+          114
+        </td>
+        <td>
+          156
+          -
+          185
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.ActorSystem.apply
+        </td>
+        <td style="background: #F0ADAD">
+          akka.actor.ActorSystem.apply(&quot;scoverage-test&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          116
+        </td>
+        <td>
+          250
+          -
+          274
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.RandomQuoteGenerator.&lt;init&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          new RandomQuoteGenerator()
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          115
+        </td>
+        <td>
+          228
+          -
+          248
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          classOf[com.sksamuel.scoverage.samples.PriceEngine]
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          118
+        </td>
+        <td>
+          207
+          -
+          276
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.ActorRefFactory.actorOf
+        </td>
+        <td style="background: #F0ADAD">
+          Platform.this.system.actorOf(akka.actor.Props.apply(classOf[com.sksamuel.scoverage.samples.PriceEngine], new RandomQuoteGenerator()))
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          117
+        </td>
+        <td>
+          222
+          -
+          275
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Props.apply
+        </td>
+        <td style="background: #F0ADAD">
+          akka.actor.Props.apply(classOf[com.sksamuel.scoverage.samples.PriceEngine], new RandomQuoteGenerator())
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          119
+        </td>
+        <td>
+          313
+          -
+          332
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.Props.apply
+        </td>
+        <td style="background: #F0ADAD">
+          akka.actor.Props.apply[com.sksamuel.scoverage.samples.CreditEngine]()((ClassTag.apply[com.sksamuel.scoverage.samples.CreditEngine](classOf[com.sksamuel.scoverage.samples.CreditEngine]): scala.reflect.ClassTag[com.sksamuel.scoverage.samples.CreditEngine]))
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          120
+        </td>
+        <td>
+          298
+          -
+          333
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.ActorRefFactory.actorOf
+        </td>
+        <td style="background: #F0ADAD">
+          Platform.this.system.actorOf(akka.actor.Props.apply[com.sksamuel.scoverage.samples.CreditEngine]()((ClassTag.apply[com.sksamuel.scoverage.samples.CreditEngine](classOf[com.sksamuel.scoverage.samples.CreditEngine]): scala.reflect.ClassTag[com.sksamuel.scoverage.samples.CreditEngine])))
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          122
+        </td>
+        <td>
+          397
+          -
+          409
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Platform.creditEngine
+        </td>
+        <td style="background: #F0ADAD">
+          Platform.this.creditEngine
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          124
+        </td>
+        <td>
+          354
+          -
+          411
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.ActorRefFactory.actorOf
+        </td>
+        <td style="background: #F0ADAD">
+          Platform.this.system.actorOf(akka.actor.Props.apply(classOf[com.sksamuel.scoverage.samples.OrderEngine], Platform.this.creditEngine))
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          121
+        </td>
+        <td>
+          375
+          -
+          395
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          classOf[com.sksamuel.scoverage.samples.OrderEngine]
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          123
+        </td>
+        <td>
+          369
+          -
+          410
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Props.apply
+        </td>
+        <td style="background: #F0ADAD">
+          akka.actor.Props.apply(classOf[com.sksamuel.scoverage.samples.OrderEngine], Platform.this.creditEngine)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          128
+        </td>
+        <td>
+          502
+          -
+          513
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Platform.priceEngine
+        </td>
+        <td style="background: #F0ADAD">
+          Platform.this.priceEngine
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          131
+        </td>
+        <td>
+          459
+          -
+          528
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.ActorRefFactory.actorOf
+        </td>
+        <td style="background: #F0ADAD">
+          Platform.this.system.actorOf(akka.actor.Props.apply(classOf[com.sksamuel.scoverage.samples.ClientActor], Platform.this.priceEngine, Platform.this.orderEngine))
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          125
+        </td>
+        <td>
+          440
+          -
+          441
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          0
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          133
+        </td>
+        <td>
+          429
+          -
+          528
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.TraversableLike.map
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.intWrapper(0).until(10).map[akka.actor.ActorRef, scala.collection.immutable.IndexedSeq[akka.actor.ActorRef]](((k: Int) =&gt; Platform.this.system.actorOf(akka.actor.Props.apply(classOf[com.sksamuel.scoverage.samples.ClientActor], Platform.this.priceEngine, Platform.this.orderEngine))))(immutable.this.IndexedSeq.canBuildFrom[akka.actor.ActorRef])
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          127
+        </td>
+        <td>
+          480
+          -
+          500
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          classOf[com.sksamuel.scoverage.samples.ClientActor]
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          130
+        </td>
+        <td>
+          474
+          -
+          527
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Props.apply
+        </td>
+        <td style="background: #F0ADAD">
+          akka.actor.Props.apply(classOf[com.sksamuel.scoverage.samples.ClientActor], Platform.this.priceEngine, Platform.this.orderEngine)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          129
+        </td>
+        <td>
+          515
+          -
+          526
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Platform.orderEngine
+        </td>
+        <td style="background: #F0ADAD">
+          Platform.this.orderEngine
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          132
+        </td>
+        <td>
+          437
+          -
+          437
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.IndexedSeq.canBuildFrom
+        </td>
+        <td style="background: #F0ADAD">
+          immutable.this.IndexedSeq.canBuildFrom[akka.actor.ActorRef]
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          126
+        </td>
+        <td>
+          448
+          -
+          450
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          10
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

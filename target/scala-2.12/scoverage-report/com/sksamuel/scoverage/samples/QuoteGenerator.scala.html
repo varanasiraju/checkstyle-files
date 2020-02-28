@@ -1,0 +1,479 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/QuoteGenerator.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.util.Random
+</span>4 <span style=''>import scala.concurrent.Future
+</span>5 <span style=''>
+</span>6 <span style=''>/** @author Stephen Samuel */
+</span>7 <span style=''>trait QuoteGenerator {
+</span>8 <span style=''>  def generate: SpotQuote
+</span>9 <span style=''>}
+</span>10 <span style=''>
+</span>11 <span style=''>class RandomQuoteGenerator extends QuoteGenerator {
+</span>12 <span style=''>
+</span>13 <span style=''>  def this(flibble: String) = {
+</span>14 <span style=''>    </span><span style='background: #F0ADAD'>this()</span><span style=''>
+</span>15 <span style=''>    </span><span style='background: #F0ADAD'>println(&quot;A fantastic constructor&quot;)</span><span style=''>
+</span>16 <span style=''>  }
+</span>17 <span style=''>
+</span>18 <span style=''>  def generate: SpotQuote = {
+</span>19 <span style=''>
+</span>20 <span style=''>    import scala.concurrent.ExecutionContext.Implicits.global
+</span>21 <span style=''>    // I want to test for loops, this seems like a good place to waste some cycles
+</span>22 <span style=''>    </span><span style='background: #AEF1AE'>for {
+</span>23 <span style=''></span><span style='background: #AEF1AE'>      s &lt;- Future.successful(&quot;mystery&quot;)
+</span>24 <span style=''></span><span style='background: #AEF1AE'>      t &lt;- Future.successful(&quot;machine&quot;)
+</span>25 <span style=''></span><span style='background: #AEF1AE'>    } yield {
+</span>26 <span style=''></span><span style='background: #AEF1AE'>      &quot;yield me&quot;</span><span style=''>
+</span>27 <span style=''>    }
+</span>28 <span style=''>
+</span>29 <span style=''>    </span><span style='background: #AEF1AE'>SpotQuote(
+</span>30 <span style=''></span><span style='background: #AEF1AE'>      InstrumentLoader.randomInstrument,
+</span>31 <span style=''></span><span style='background: #AEF1AE'>      if (System.currentTimeMillis() == 0) </span><span style='background: #F0ADAD'>new Currency(&quot;Flibble&quot;)</span><span style='background: #AEF1AE'> else new Currency(&quot;USD&quot;),
+</span>32 <span style=''></span><span style='background: #AEF1AE'>      BigDecimal.valueOf(Random.nextDouble * 100),
+</span>33 <span style=''></span><span style='background: #AEF1AE'>      BigDecimal.valueOf(Random.nextDouble * 100)
+</span>34 <span style=''></span><span style='background: #AEF1AE'>    )</span><span style=''>
+</span>35 <span style=''>  }
+</span>36 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          165
+        </td>
+        <td>
+          262
+          -
+          262
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          163
+        </td>
+        <td>
+          268
+          -
+          274
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.RandomQuoteGenerator.&lt;init&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          RandomQuoteGenerator.this.&lt;init&gt;()
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          164
+        </td>
+        <td>
+          279
+          -
+          313
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;A fantastic constructor&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          166
+        </td>
+        <td>
+          534
+          -
+          543
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;mystery&quot;
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          170
+        </td>
+        <td>
+          499
+          -
+          615
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.flatMap
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.Future.successful[String](&quot;mystery&quot;).flatMap[String](((s: String) =&gt; scala.concurrent.Future.successful[String](&quot;machine&quot;).map[String](((t: String) =&gt; &quot;yield me&quot;))(scala.concurrent.ExecutionContext.Implicits.global)))(scala.concurrent.ExecutionContext.Implicits.global)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          167
+        </td>
+        <td>
+          574
+          -
+          583
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;machine&quot;
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          169
+        </td>
+        <td>
+          551
+          -
+          615
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.concurrent.Future.map
+        </td>
+        <td style="background: #AEF1AE">
+          scala.concurrent.Future.successful[String](&quot;machine&quot;).map[String](((t: String) =&gt; &quot;yield me&quot;))(scala.concurrent.ExecutionContext.Implicits.global)
+        </td>
+      </tr><tr>
+        <td>
+          26
+        </td>
+        <td>
+          168
+        </td>
+        <td>
+          605
+          -
+          615
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;yield me&quot;
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          181
+        </td>
+        <td>
+          627
+          -
+          878
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.SpotQuote.apply
+        </td>
+        <td style="background: #AEF1AE">
+          SpotQuote.apply(InstrumentLoader.randomInstrument, if (java.lang.System.currentTimeMillis().==(0))
+  new Currency(&quot;Flibble&quot;)
+else
+  new Currency(&quot;USD&quot;), scala.`package`.BigDecimal.valueOf(scala.util.Random.nextDouble().*(100)), scala.`package`.BigDecimal.valueOf(scala.util.Random.nextDouble().*(100)))
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          171
+        </td>
+        <td>
+          644
+          -
+          677
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.InstrumentLoader.randomInstrument
+        </td>
+        <td style="background: #AEF1AE">
+          InstrumentLoader.randomInstrument
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          173
+        </td>
+        <td>
+          722
+          -
+          745
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Currency.&lt;init&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          new Currency(&quot;Flibble&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          176
+        </td>
+        <td>
+          751
+          -
+          770
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Currency.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Currency(&quot;USD&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          175
+        </td>
+        <td>
+          751
+          -
+          770
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Currency.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new Currency(&quot;USD&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          172
+        </td>
+        <td>
+          689
+          -
+          720
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Long.==
+        </td>
+        <td style="background: #AEF1AE">
+          java.lang.System.currentTimeMillis().==(0)
+        </td>
+      </tr><tr>
+        <td>
+          31
+        </td>
+        <td>
+          174
+        </td>
+        <td>
+          722
+          -
+          745
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.Currency.&lt;init&gt;
+        </td>
+        <td style="background: #F0ADAD">
+          new Currency(&quot;Flibble&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          178
+        </td>
+        <td>
+          778
+          -
+          821
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.BigDecimal.valueOf
+        </td>
+        <td style="background: #AEF1AE">
+          scala.`package`.BigDecimal.valueOf(scala.util.Random.nextDouble().*(100))
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          177
+        </td>
+        <td>
+          797
+          -
+          820
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.*
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Random.nextDouble().*(100)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          180
+        </td>
+        <td>
+          829
+          -
+          872
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.BigDecimal.valueOf
+        </td>
+        <td style="background: #AEF1AE">
+          scala.`package`.BigDecimal.valueOf(scala.util.Random.nextDouble().*(100))
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          179
+        </td>
+        <td>
+          848
+          -
+          871
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Double.*
+        </td>
+        <td style="background: #AEF1AE">
+          scala.util.Random.nextDouble().*(100)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

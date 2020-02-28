@@ -1,0 +1,28 @@
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.OrderEngineTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.CreditEngineTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.PriceEngineTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.FuturesTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.SimpleObject2Test, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.CharmaxTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.OrderValidatorTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.SimpleClassTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.DebuggerTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.DefaultArgumentsObjectTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[debug] Running TaskDef(com.sksamuel.scoverage.samples.ClientActorTest, org.scalatest.tools.Framework$$anon$1@20e4c49c, false, [SuiteSelector])
+[info] Run completed in 7 seconds, 877 milliseconds.
+[info] Total number of tests run: 18
+[info] Suites: completed 11, aborted 0
+[info] Tests: succeeded 18, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[debug] Passed tests:
+[debug] 	com.sksamuel.scoverage.samples.OrderEngineTest
+[debug] 	com.sksamuel.scoverage.samples.CreditEngineTest
+[debug] 	com.sksamuel.scoverage.samples.PriceEngineTest
+[debug] 	com.sksamuel.scoverage.samples.FuturesTest
+[debug] 	com.sksamuel.scoverage.samples.SimpleObject2Test
+[debug] 	com.sksamuel.scoverage.samples.CharmaxTest
+[debug] 	com.sksamuel.scoverage.samples.OrderValidatorTest
+[debug] 	com.sksamuel.scoverage.samples.SimpleClassTest
+[debug] 	com.sksamuel.scoverage.samples.DebuggerTest
+[debug] 	com.sksamuel.scoverage.samples.DefaultArgumentsObjectTest
+[debug] 	com.sksamuel.scoverage.samples.ClientActorTest

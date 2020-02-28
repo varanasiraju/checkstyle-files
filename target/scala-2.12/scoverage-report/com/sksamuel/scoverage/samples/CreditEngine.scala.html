@@ -1,0 +1,584 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          com/sksamuel/scoverage/samples/CreditEngine.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier;'>1 <span style=''>package com.sksamuel.scoverage.samples
+</span>2 <span style=''>
+</span>3 <span style=''>import akka.actor.Actor
+</span>4 <span style=''>
+</span>5 <span style=''>/** @author Stephen Samuel */
+</span>6 <span style=''>class CreditEngine extends Actor {
+</span>7 <span style=''>  val MaxCredit = </span><span style='background: #AEF1AE'>BigDecimal.valueOf(2000)</span><span style=''>
+</span>8 <span style=''>
+</span>9 <span style=''>  def receive = {
+</span>10 <span style=''>    case req: CreditRequest =&gt;
+</span>11 <span style=''>      </span><span style='background: #AEF1AE'>println(&quot;Received a credit request&quot;)</span><span style=''>
+</span>12 <span style=''>      if (</span><span style='background: #AEF1AE'>req.amount &lt; MaxCredit</span><span style=''>) </span><span style='background: #AEF1AE'>sender ! CreditApprove(req.req, req.amount, req.client)</span><span style=''>
+</span>13 <span style=''>      else </span><span style='background: #AEF1AE'>sender ! CreditReject(req.req, req.client)</span><span style=''>
+</span>14 <span style=''>      if (</span><span style='background: #AEF1AE'>System.currentTimeMillis &lt; 0</span><span style=''>) {
+</span>15 <span style=''>        </span><span style='background: #F0ADAD'>println(&quot;Don't want to see this invoked&quot;)</span><span style=''> // should not see this covered
+</span>16 <span style=''>      }
+</span>17 <span style=''>  }
+</span>18 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          7
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          148
+          -
+          172
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.BigDecimal.valueOf
+        </td>
+        <td style="background: #AEF1AE">
+          scala.`package`.BigDecimal.valueOf(2000L)
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          190
+          -
+          190
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditEngine.$anonfun.&lt;init&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          new $anonfun()
+        </td>
+      </tr><tr>
+        <td>
+          11
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          229
+          -
+          265
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.println(&quot;Received a credit request&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          323
+          -
+          330
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditRequest.req
+        </td>
+        <td style="background: #AEF1AE">
+          req.req
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          309
+          -
+          355
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditApprove.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CreditApprove.apply(req.req, req.amount, req.client)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          300
+          -
+          355
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(CreditEngine.this.sender()).!(CreditApprove.apply(req.req, req.amount, req.client))(CreditEngine.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          289
+          -
+          298
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditEngine.MaxCredit
+        </td>
+        <td style="background: #AEF1AE">
+          CreditEngine.this.MaxCredit
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          300
+          -
+          355
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(CreditEngine.this.sender()).!(CreditApprove.apply(req.req, req.amount, req.client))(CreditEngine.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          300
+          -
+          306
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Actor.sender
+        </td>
+        <td style="background: #AEF1AE">
+          CreditEngine.this.sender()
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          344
+          -
+          354
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditRequest.client
+        </td>
+        <td style="background: #AEF1AE">
+          req.client
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          307
+          -
+          307
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          CreditEngine.this.self
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          276
+          -
+          298
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.math.Ordered.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          req.amount.&lt;(CreditEngine.this.MaxCredit)
+        </td>
+      </tr><tr>
+        <td>
+          12
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          332
+          -
+          342
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditRequest.amount
+        </td>
+        <td style="background: #AEF1AE">
+          req.amount
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          398
+          -
+          408
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditRequest.client
+        </td>
+        <td style="background: #AEF1AE">
+          req.client
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          367
+          -
+          409
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(CreditEngine.this.sender()).!(CreditReject.apply(req.req, req.client))(CreditEngine.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          389
+          -
+          396
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditRequest.req
+        </td>
+        <td style="background: #AEF1AE">
+          req.req
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          374
+          -
+          374
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          akka.actor.Actor.self
+        </td>
+        <td style="background: #AEF1AE">
+          CreditEngine.this.self
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          376
+          -
+          409
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          com.sksamuel.scoverage.samples.CreditReject.apply
+        </td>
+        <td style="background: #AEF1AE">
+          CreditReject.apply(req.req, req.client)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          367
+          -
+          409
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          akka.actor.ScalaActorRef.!
+        </td>
+        <td style="background: #AEF1AE">
+          actor.this.`package`.actorRef2Scala(CreditEngine.this.sender()).!(CreditReject.apply(req.req, req.client))(CreditEngine.this.self)
+        </td>
+      </tr><tr>
+        <td>
+          13
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          367
+          -
+          373
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          akka.actor.Actor.sender
+        </td>
+        <td style="background: #AEF1AE">
+          CreditEngine.this.sender()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          416
+          -
+          416
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          420
+          -
+          448
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Long.&lt;
+        </td>
+        <td style="background: #AEF1AE">
+          java.lang.System.currentTimeMillis().&lt;(0)
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          416
+          -
+          416
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td style="background: #AEF1AE">
+          ()
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          460
+          -
+          501
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;Don\'t want to see this invoked&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          460
+          -
+          501
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Predef.println
+        </td>
+        <td style="background: #F0ADAD">
+          scala.Predef.println(&quot;Don\'t want to see this invoked&quot;)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

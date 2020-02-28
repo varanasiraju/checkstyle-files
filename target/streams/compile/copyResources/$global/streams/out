@@ -1,0 +1,7 @@
+[debug] Copy resource mappings: 
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/main/resources/com,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/classes/com)
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/main/resources/com/sksamuel,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/classes/com/sksamuel)
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/main/resources/com/sksamuel/scoverage2,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/classes/com/sksamuel/scoverage2)
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/main/resources/com/sksamuel/scoverage,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/classes/com/sksamuel/scoverage)
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/main/resources/com/sksamuel/scoverage2/dow.csv,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/classes/com/sksamuel/scoverage2/dow.csv)
+[debug] 	(/var/lib/jenkins/workspace/scoverage/src/main/resources/com/sksamuel/scoverage/dow.csv,/var/lib/jenkins/workspace/scoverage/target/scala-2.12/classes/com/sksamuel/scoverage/dow.csv)
